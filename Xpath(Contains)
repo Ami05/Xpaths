@@ -1,0 +1,38 @@
+1. Contains:
+    //*[Contains(text(),'Clear')]  --> Finds Text 'Clear' every where in the page.
+    
+    //*[Contains(@id,'ActDetailsPanel')]  --> Any id which contains 'ActDetailsPanel' in there id .
+    
+    //*[contains(@id,'navbar')]//*[contains(@id,'nav-belt')]  --> In complete page search for anything with id ='navbar' then within that tag find any tag with id = 'navbelt'.
+   
+   //a[contains(@href,'AddRows')]   --> Find an anchor tag with attribute href and value of href is 'AddRows'
+   
+   //*[text()[contains(.,'Home')]] --> if the desired text is not with in the tags but outside. such as:
+
+        <table>
+        	  <tr>
+	        	  <td>
+		        	  <div>
+		        		  <img src=''>
+		        	  </div>
+		            Hello
+		          </td>
+	          </tr>
+        </table>
+
+  //*[contains(text(),'Number')]/parent::tr//input --> Go to parent tr and the find input tag any where in side this tr.
+  
+  //*[@id='3002003001']/ancestor::tbody[1]//input --> Reach on the tag with id='3002003001' then find the first tbody in its ancesterial hierarchy.Once found then find all the input tags within that tbody.
+  
+  //*[@id='test']/following-sibling::table  --> Find the tag with id='test' .Then find the following-sibling 'table' ie tags following to the located tag.
+  
+  //*[contains(text(), 'Local Promotion')]/preceding-sibling::td[1]  --> Find the text 'Local Promotion' and then find the 1st td in the above same level of that tag.
+  
+  //*[contains(@onclick,'moveSelectedItemsToRight()')] --> Find the tag which has onclick specified 'moveSelectedItemsToRight' attribute.
+
+
+
+2. Starts-With
+  
+      //*[starts-with(@value,'0.433')] -- > any tag which has value that starts with 0.433    (This can be replacement for //*[contains(@value,'0.433')] )
+      //*[starts-with(@value,'0.433')] -- > any tag which has value that starts with 0.433    (This can be replacement for //*[contains(@value,'0.433')] )
