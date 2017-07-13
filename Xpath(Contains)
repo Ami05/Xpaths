@@ -1,5 +1,16 @@
-1. Contains:
-    //*[Contains(text(),'Clear')]  --> Finds Text 'Clear' every where in the page.
+
+Notations -
+	@ is used with Attribute
+	() is used with text
+
+
+1.Exact Seacrh
+    
+    //*[text()='Clear'] --> Finds exact Text 'Clear' in the page. 
+    //*[@id='ActDetailsPanel'] --> Find id ActDetailsPanel only. 
+
+2. Contains:
+   //*[Contains(text(),'Clear')]  --> Finds Text 'Clear' every where in the page.
     
     //*[Contains(@id,'ActDetailsPanel')]  --> Any id which contains 'ActDetailsPanel' in there id .
     
@@ -7,7 +18,7 @@
    
    //a[contains(@href,'AddRows')]   --> Find an anchor tag with attribute href and value of href is 'AddRows'
    
-   //*[text()[contains(.,'Home')]] --> if the desired text is not with in the tags but outside. such as:
+   //*[text()[contains(.,'Hello')]] --> if the desired text is not with in the tags but outside. such as:
 
         <table>
         	  <tr>
